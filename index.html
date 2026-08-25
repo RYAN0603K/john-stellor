@@ -57,8 +57,21 @@
             <a href="#conhecimento" class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all">CONTEÚDOS</a>
             <a href="#contato" class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all">CONTATO</a>
         </div>
-        <button class="md:hidden text-white uppercase tracking-widest text-xs">Menu</button>
+        <button id="open-menu" class="md:hidden text-white uppercase tracking-widest text-xs">Menu</button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 backdrop-blur-xl">
+        <button id="close-menu" class="absolute top-8 right-8 text-white uppercase tracking-widest text-xs">FECHAR</button>
+        <img src="logo.png" alt="Logo" class="w-16 h-16 object-contain invert opacity-50 mb-4" />
+        <a href="#sobre" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Sobre</a>
+        <a href="#filosofia" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Filosofia</a>
+        <a href="#midia" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Na Mídia</a>
+        <a href="#podcasts" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Podcasts</a>
+        <a href="#conhecimento" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Conteúdos</a>
+        <a href="#biografia" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Biografia</a>
+        <a href="#contato" class="mobile-link text-white/50 hover:text-white uppercase tracking-[0.2em] text-lg">Contato</a>
+    </div>
 
     <!-- 1. HERO SECTION -->
     <section class="relative min-h-screen flex flex-col items-center justify-end z-10 px-4 pt-20 overflow-hidden" id="hero">
