@@ -61,13 +61,12 @@
     </nav>
 
     <!-- 1. HERO SECTION -->
-    <!-- 1. HERO SECTION -->
     <section class="relative min-h-screen flex flex-col items-center justify-end z-10 px-4 pt-20 overflow-hidden" id="hero">
-        <!-- Fundo: Imagem do Trono subida e 100% visível no topo -->
-        <div class="absolute inset-x-0 top-0 z-0 h-[75vh] md:h-[85vh] w-full">
-            <img src="Colocar_trono_preto_com_velas_202608242354.jpeg" alt="Trono com Velas" class="w-full h-full object-cover object-top opacity-100" />
+        <!-- Fundo: Imagem do Trono subida e focada no rosto dele (que está à direita na foto original) -->
+        <div class="absolute inset-x-0 top-0 z-0 h-[75vh] md:h-[100vh] w-full">
+            <img src="Colocar_trono_preto_com_velas_202608242354.jpeg" alt="Trono com Velas" class="w-full h-full object-cover object-[70%_25%] md:object-[65%_25%] opacity-100" />
             
-            <!-- Degradê de transição APENAS na parte de baixo para não escurecer o rosto/topo da foto -->
+            <!-- Degradê de transição APENAS na parte de baixo -->
             <div class="absolute bottom-0 left-0 right-0 h-[70%] bg-gradient-to-t from-black via-black/90 to-transparent"></div>
         </div>
         
@@ -634,15 +633,13 @@
                 </div>
             </div>
             
-            <div class="text-center text-[10px] tracking-widest text-white/30 pt-8 border-t border-white/5 flex flex-col gap-2">
-                <div>&copy; <span id="year"></span> JOHN STELLOR / FRATER THANATOS. TODOS OS DIREITOS RESERVADOS.</div>
-                <div>FEITO POR <a href="https://assessoriavoxe.com" target="_blank" class="text-white/60 hover:text-white transition-colors">ASSESSORIA VOXE</a></div>
+            <div class="text-center text-[10px] tracking-widest pt-8 border-t border-white/5 flex flex-col gap-3">
+                <div class="text-white/30">&copy; <span id="year"></span> JOHN STELLOR / FRATER THANATOS. TODOS OS DIREITOS RESERVADOS.</div>
+                <div class="text-white/70 mt-2">FEITO POR <a href="https://assessoriavoxe.com" target="_blank" class="text-white font-bold hover:text-[#FF0000] transition-colors underline decoration-white/30 underline-offset-4">ASSESSORIA VOXE</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- Lenis Smooth Scroll (Standard Industry Library for Momentum Scrolling) -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -95,3 +95,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #444444;
 }
+
+html { scroll-behavior: smooth; }
+

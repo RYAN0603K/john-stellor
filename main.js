@@ -1,22 +1,5 @@
 // Frater Thanatos - Main JS
 
-// --- 0. LENIS SMOOTH SCROLL (Momentum / Scroll Delay) ---
-const lenis = new Lenis({
-    duration: 1.0, // Reduzido para ficar mais natural e "razoável"
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-    smoothTouch: true,
-    touchMultiplier: 1.2, // Mais ágil no toque
-});
-
-lenis.on('scroll', ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
-
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
