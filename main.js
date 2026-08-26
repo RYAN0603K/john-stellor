@@ -109,7 +109,7 @@ gsap.utils.toArray('.reveal-text').forEach(elem => {
             scrollTrigger: {
                 trigger: elem,
                 start: "top 85%",
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none none"
             }
         }
     );
@@ -127,7 +127,7 @@ gsap.utils.toArray('.reveal-card').forEach((elem, i) => {
             scrollTrigger: {
                 trigger: elem,
                 start: "top 85%",
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none none"
             }
         }
     );
@@ -144,7 +144,7 @@ gsap.utils.toArray('.reveal-block').forEach(elem => {
             scrollTrigger: {
                 trigger: elem,
                 start: "top 85%",
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none none"
             }
         }
     );
