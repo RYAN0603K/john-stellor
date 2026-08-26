@@ -205,19 +205,20 @@ function initFakeTimer() {
     if (!hoursEl || !minutesEl || !secondsEl) return;
 
     // 24 hours in milliseconds
-    const duration = 24 * 60 * 60 * 1000; 
-    let endTime = localStorage.getItem('offerEndTime');
+    // Horas quebradas para parecer super verídico (ex: 7 horas, 34 minutos e 15 segundos)
+    const duration = (7 * 60 * 60 * 1000) + (34 * 60 * 1000) + (15 * 1000); 
+    let endTime = localStorage.getItem('offerEndTimeV2');
 
     if (!endTime || Date.now() > endTime) {
         endTime = Date.now() + duration;
-        localStorage.setItem('offerEndTime', endTime);
+        localStorage.setItem('offerEndTimeV2', endTime);
     }
 
     function updateTimer() {
         let remaining = endTime - Date.now();
         if (remaining <= 0) {
             endTime = Date.now() + duration;
-            localStorage.setItem('offerEndTime', endTime);
+            localStorage.setItem('offerEndTimeV2', endTime);
             remaining = duration;
         }
 
