@@ -195,3 +195,42 @@ if (openMenuBtn && closeMenuBtn && mobileMenu) {
         });
     });
 }
+
+// --- Fake 24h Countdown Timer ---
+function initFakeTimer() {
+    const hoursEl = document.getElementById('timer-hours');
+    const minutesEl = document.getElementById('timer-minutes');
+    const secondsEl = document.getElementById('timer-seconds');
+    
+    if (!hoursEl || !minutesEl || !secondsEl) return;
+
+    // 24 hours in milliseconds
+    const duration = 24 * 60 * 60 * 1000; 
+    let endTime = localStorage.getItem('offerEndTime');
+
+    if (!endTime || Date.now() > endTime) {
+        endTime = Date.now() + duration;
+        localStorage.setItem('offerEndTime', endTime);
+    }
+
+    function updateTimer() {
+        let remaining = endTime - Date.now();
+        if (remaining <= 0) {
+            endTime = Date.now() + duration;
+            localStorage.setItem('offerEndTime', endTime);
+            remaining = duration;
+        }
+
+        const h = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((remaining / 1000 / 60) % 60);
+        const s = Math.floor((remaining / 1000) % 60);
+
+        hoursEl.textContent = h.toString().padStart(2, '0');
+        minutesEl.textContent = m.toString().padStart(2, '0');
+        secondsEl.textContent = s.toString().padStart(2, '0');
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+}
+document.addEventListener('DOMContentLoaded', initFakeTimer);
